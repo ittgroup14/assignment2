@@ -1,2 +1,2 @@
 # assignment2
-Intro to IT Group #14 Assignment 2
+Repository for our IIT Assignment 2
