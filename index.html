@@ -1,50 +1,89 @@
 <!doctype html>
+<!--- Nosey little bastard, arent you? -->
 <html>
 <head>
 <meta charset="utf-8">
-<title>RMIT IIT Group #14 - Assignment 2</title>
-<style type="text/css">
-body,td,th {
-    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
-    font-size: 14px;
-    color: #303030;
-}
-body {
-    background-color: #FFFFFF;
-}
-a:link {
-    color: #12466B;
-    text-decoration: none;
-}
-a:visited {
-    text-decoration: none;
-    color: #12466B;
-}
-a:hover {
-    text-decoration: underline;
-    color: #439EDF;
-}
-a:active {
-    text-decoration: none;
-}
-</style>
+<title>Group #14 Assignment 2</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="jquery-3.4.1.min.js"></script>
 </head>
+<script> 
+$(document).ready(function(){
 
+  $('div.dropdown').each(function() {
+    var $dropdown = $(this);
+
+    $("a.dropdown-link", $dropdown).click(function(e) {
+      e.preventDefault();
+      $div = $("div.dropdown-container", $dropdown);
+      $div.toggle(500);
+      $("div.dropdown-container").not($div).hide(500);
+      return false;
+    });
+
+});
+    
+  $('html').click(function(){
+    $("div.dropdown-container").hide();
+  });
+     
+});
+</script>
 <body>
-<p><strong>IIT Assignment 2 | Group #14 Placeholder</strong></p>
-<p>Jason, I've put up this placeholder page for our assignment. Are we using a template css or should we make our own from scratch? I haven't done much since last decade (almost two now, given its the end of the another), but I am happy to assist on design if you guys are busy with family and/or holidays, I have the next week off work and we had an early Christmas already so I could potentially play catch up. </p>
-<p>Group GitHub page: <a href="https://github.com/ittgroup14/assignment2">https://github.com/ittgroup14/assignment2</a> - You should have all received invites from Jason to this so you can edit this repository too once you accept. Please try to comment on any commits you make so everybody can keep up to date given our crazy conflicting holiday schedules.</p>
-<p>For easy access and because Canvas can be a pain in the ass: <br>
-Directly hosted assignment PDF: <a href="IITA2.pdf">IITA2</a><br>
-Burning Glass Data: 
-<a href="BurningGlass.pdf">BurningGlass</a></p>
-<p>Individual member pages</p>
-<p>Anthony - <a href="https://anthonybro.github.io/COSC2196_Assignment1/">https://anthonybro.github.io/COSC2196_Assignment1/</a></p>
-<p>Timothy - <a href="https://timmados.github.io/curly-octo-journey/index.html"></a><a href="https://timmados.github.io/curly-octo-journey/index.html">https://timmados.github.io/curly-octo-journey/</a></p>
-<p>Shaun - <a href="https://sjslottey.github.io/iit/">https://sjslottey.github.io/iit/</a></p>
-<p>Jake - <a href="https://jakemcandrew221.github.io/">https://jakemcandrew221.github.io/</a></p>
-<p>Jason T - <a href="https://jasontilgner.github.io/assign1/">https://jasontilgner.github.io/assign1/</a></p>
-<p>Jason W - <a href="https://s3291269.github.io/">https://s3291269.github.io/</a></p>
-<p>&nbsp;</p>
+<header>
+DREAM TEAM #14 (TEAM NAME WILL GO HERE)
+  <h5>CLICK BELOW TO VIEW OUR INDIVIDUAL PROFILES</h5>
+<p>
+	<a href="https://anthonybro.github.io/COSC2196_Assignment1/"><img src="img/avatar_placeholder.png" alt="Anthony Brown" width="64" height="63"/></a>
+	<a href="https://timmados.github.io/curly-octo-journey/"><img src="img/avatar_placeholder.png" width="64" height="63" alt="Timothy Damon"/></a>
+	<a href="https://sjslottey.github.io/iit/"><img src="img/avatar_placeholder.png" width="64" height="63" alt="Shaun Lottey"/></a>
+	<a href="https://jakemcandrew221.github.io/"><img src="img/avatar_placeholder.png" width="64" height="63" alt="Jake McAndrew"/></a>
+	<a href="https://jasontilgner.github.io/assign1/"><img src="img/avatar_placeholder.png" width="64" height="63" alt="Jason Tilgner"/></a>
+	<a href="https://s3291269.github.io/"><img src="img/avatar_placeholder.png" width="64" height="63" alt="Jason Walstab"/></a>
+</p>
+
+<div id="dropdown-1" class="dropdown dropdown-processed">
+  <a class="dropdown-link" href="#">COSC2196 Group #14</a>
+  <div class="dropdown-container">
+    <ul>
+        <p>This is group 14's Github Pages hosted website. We will be using this as part of assignment 2 and for any relevant information related to it. I have started on a basic template using CSS and jQuery as honestly I find it more interesting to make things from scratch and have nothing better to do over the holiday break. I will upload our photos used from assignment 1 on a later commit for our personal page profile links. Jason will be starting on the content side of things later this week.</p>
+        <p>Please feel free to edit any of it as you see fit. </p>
+        <p><a href="https://ittgroup14.github.io/assignment2/IITA2.pdf" title="Assignment 2">Assignment 2 PDF <img src="img/save.png" width="14" height="15" alt=""/></a>
+        </p>
+        <p><a href="https://ittgroup14.github.io/assignment2/BurningGlass.pdf">Burning Glass Data <img src="img/save.png" width="14" height="15" alt=""/></a></p>
+    </ul>
+  </div>
+  </div>
+<br>
+<div id="dropdown-2" class="dropdown dropdown-processed">
+  <a class="dropdown-link" href="#">Section 2</a>
+  <div class="dropdown-container" style="display: none;">
+    <ul>
+      <br>TBD
+    </ul>
+  </div>
+	</div>
+<br>
+<div id="dropdown-3" class="dropdown dropdown-processed">
+  <a class="dropdown-link" href="#">Section 3</a>
+  <div class="dropdown-container" style="display: none;">
+    <ul>
+      <br>TBD
+    </ul>
+  </div>
+	</div>
+</header>
+
+	
+	
 </body>
+	
+	
+
+
+<!-- Footer -->
+<footer>
+COPYRIGHT 2019-2020<br>
+ANTHONY BROWN, TIMOTHY DAMON, SHAUN LOTTEY, JACK MCANDREW, JASON TILGNER AND JASON WALSTAB
+</footer>
 </html>

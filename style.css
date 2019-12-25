@@ -1,2 +1,92 @@
+@charset "utf-8";
 /* CSS Document */
-/* TBD */
+/* COPYRIGHT ANTHONY BROWN, TIMOTHY DAMON, SHAUN LOTTEY, JACK MCANDREW, JASON TILGNER AND JASON WALSTAB 2019-2020. NOT TO BE REPRODUCED WITHOUT PERMISSION */
+header {
+	text-align: center;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	font-size: 14px;
+	font-weight: 700;
+	top:0px;
+	bottom:25px;
+}
+
+.dropdown {
+    margin: 0 auto 20 auto;
+    text-align: left;
+	font-size: 14px;
+
+}
+.dropdown-link {
+	font-size: 24px;
+	
+}
+
+.dropdown-container {
+	margin: 10px;
+	padding: 20px;
+	border: 1px solid white;
+	border-radius: 5px;
+	word-wrap:normal;
+	
+	
+}
+body,td,th {
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+body {
+    background-color: #555555;
+}
+/*Header Shadow Effect*/
+body::before {
+  content: "";
+  position: fixed;
+  top: -50px;
+  left: 0;
+  height: 50px;
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 6.8);
+  z-index: 1000;
+}
+	img {
+		border-radius: 50%;
+		margin: 10px;		
+}
+body {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	color: #ffffff;
+    background-color: #555555;;
+	margin-bottom:50px;
+	margin-left:25px;
+	margin-right:25px;
+}
+dl {
+	text-align: justify;
+}
+a:link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+a:hover {
+    text-decoration: none;
+    color: #809CB0;
+}
+a:active {
+    text-decoration: none;
+    color: #809CB0;
+}
+
+footer {	
+	text-align: center;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	font-size: 8px;
+	color:#FFFFFF;
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	height:25px;
+	width:100%;
+}
+
