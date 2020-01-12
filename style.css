@@ -2,7 +2,10 @@
 /* CSS Document */
 /* COPYRIGHT ANTHONY BROWN, TIMOTHY DAMON, SHAUN LOTTEY, JACK MCANDREW, JASON TILGNER AND JASON WALSTAB 2019-2020. NOT TO BE REPRODUCED WITHOUT PERMISSION */
 
-
+.header {
+	text-align: center;
+	background: #1F1F1F
+}
 
 .dropdown {
     margin: 0 auto 20 auto;
@@ -38,12 +41,7 @@ body::before {
   height: 50px;
   box-shadow: 0px 0 30px rgba(0, 0, 0, 6.8);
   z-index: 1000;
-}
-	img {
-		border-radius: 50%;
-		margin: 10px;		
-}
-body {
+}dy {
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 	color: #000000;
     background-color: #FFFFFF;
