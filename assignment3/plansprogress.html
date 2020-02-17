@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="header">
+	<div class="team14">
+	</div>
+</div>
+
+<div id="navbar">
+	<a class="active" href="index.html">Assignment 3: ESL</a>
+	  
+  <a href="javascript:void(0)">>></a>
+  <a href="teamprofile.html">Team Profile</a>
+	<a href="overview.html">Project Overview</a>
+	  <a href="aimsgoals.html">Aims and Goals</a>
+	  <a href="plansprogress.html">Plans and Progress</a>
+	  <a href="toolstech.html">Tools and Technologies</a>
+			  <a href="testing.html">Testing</a>
+		  <a href="risks.html">Risks</a>
+		  <a href="processes.html">Processes</a>
+	  <a href="jobs.html">Jobs</a>
+	  <a href="feedback.html">Group Feedback</a>
+</div>
+<h1>Plans and Progress </h1>
+<h2>The Plan</h2>
+<h3>Planned features and flow of the software</h3>
+<p>The ESL flashcard system will start with these  features, with the possibility to expand and add more features later as needed: </p>
+<ul>
+  <li>The main menu </li>
+  <li>A collection of stock flashcards (showing  a picture and the English noun below it) </li>
+  <li>A flashcard selection screen to choose  the appropriate flashcards </li>
+  <li>A system which allows users to add  flashcards </li>
+  <li>A &lsquo;Click the correct card&rsquo; mini game </li>
+  <li>A &lsquo;Memory&rsquo; mini game </li>
+</ul>
+<p>Planned  Program Flow Diagram: <br>
+  <img width="597" height="303" src="plansprogress_clip_image002.gif"></p>
+<h3>The plan for the Main Menu.</h3>
+<p>The main menu will consist of three buttons: </p>
+<ul>
+  <li>&lsquo;Correct Card Game&rsquo; </li>
+  <li>&lsquo;Memory Game&rsquo; </li>
+  <li>&lsquo;Exit Application&rsquo; </li>
+</ul>
+<p>Clicking either of the game buttons will proceed  to load up the selected mini-game, whereas the exit button will exit the  application. The application will have an appropriate background image and a  simple music loop. </p>
+<h3>The plan for the Flashcards</h3>
+<p>The team will make a basic set of twenty  flashcards to the following specifications:<br>
+  <img width="288" height="167" src="plansprogress_clip_image004.gif"> <br>
+  All flashcards will also have an  accompanying audio file that reads the word on the flashcard in a .wav format.</p>
+<h3>The plan for the &lsquo;Flashcard Selection&rsquo; system</h3>
+<p>All flashcard image files, and audio files  will be placed in a single folder in the applications root directory in an  images folder, underneath a flashcards folder: (flashcards/images). Each  flashcard image will be named based on the card in the .PNG image format, say  for example &lsquo;pineapple.png&rsquo;.  A  corresponding audio file in the .WAV format will also be placed in an audio  folder in that same flashcards directory (flashcards/audio) and will be named  to match the image name (I.e. pineapple.wav).<br>
+  The application will then dynamically load the  image and audio files to create the flashcards in the applications flashcard  selection page. The user will then have to select six flashcards. As the user  clicks flashcards, they will turn green. Once the user has chosen six  flashcards, they will continue to the mini game they had previously selected. </p>
+<h3>The plan for the mini game &lsquo;Click the correct card.&rsquo;</h3>
+<p>A row of six flashcards will be displayed face  up. The application pronounces one of the cards. The user then has 10 seconds  to click on the matching flashcard. The user gets one point for a correct  answer, or one point deducted for a wrong answer. The round will end when the  application has finished reading all the flashcards. The game will not repeat  the same flashcard twice. <br>
+  <img width="600" height="227" src="plansprogress_clip_image006.gif"></p>
+<h3>The plan for the mini game &lsquo;Memory&rsquo;</h3>
+<p>A grid of flashcards is displayed, which is each  of the six flashcards loaded twice, then distributed randomly on the screen.  The flashcards are face down. The user will then click flashcards in pairs,  looking for matches. As the card turns over, the audio plays.  The user gets a point every time they correctly  reveal a matching pair. The game has a timer that gives the user a time to beat  for the round. The round ends when the user has matched all the pairs, or the  timer runs out. A final score is given based on the time remaining as well as  how many pairs the user successfully matched.<img width="602" height="493" src="plansprogress_clip_image008.gif"> <br>
+  The plan for mini game &lsquo;Word Match&rsquo; <br>
+  Similar to game 1,  a grid of 10 images is displayed though this time just the image of the object  is shown not the name of the object. The application will display the English  name of one of the objects at the bottom of the screen below the cards, the  user then has 10 seconds to match the word to the image by clicking on the  correct image. After correctly selecting all the correct images the game will  end or after 60 seconds has elapsed. Additional functionality could include  displaying the name of the object in the user&rsquo;s 1st language.</p>
+<h3>&nbsp;</h3>
+<h3>The plan for the marketing presentation video</h3>
+<p>We will create a basic video advertisement  for our flashcard system. The video will showcase all the features of our  program as well as show a small sample video of a non-native child using this  application.</p>
+<h3>The plan for the website</h3>
+<p>We will create a simple website to show the  product's features as well as allow the user to download the application onto  their system. This website will show system requirements as well as  documentation on how to use our software.</p>
+<h2>Progress</h2>
+<h3>Programming Development</h3>
+<h4>Setting up the Unity project</h4>
+<p>The project itself is created using the  name &lsquo;FlashCardSystem&rsquo;. The settings were changed to 2D, rather than 3D as the  program does not utilise the 3D engine of Unity.</p>
+<h4>Global Project Assets<strong></strong></h4>
+<p>The project itself will consist of several  unity scenes, which are containers which hold the game objects alongside  scripts. As of this version (v0.03), there are three scenes currently setup:</p>
+<ul>
+  <li>&lsquo;Main Menu&rsquo;: The main menu  users see when they enter the application.</li>
+  <li>&lsquo;Flashcard Selection&rsquo;: The  scene that allows users to select which flashcards they will use.</li>
+  <li>&lsquo;Mini Game 1&rsquo;: A scene that  plays a simple &lsquo;Choose the correct flashcard&rsquo; mini game.</li>
+</ul>
+<h4>The main menu Scene</h4>
+<p>The main menu consists of a background  image, an exit button, and a list of buttons for each mini game.<br>
+  As of version v0.03, this is the current  display that the user will see when they load the application:<br>
+  <img width="480" height="446" src="plansprogress_clip_image010.gif"></p>
+<h5>Scene Diagram:</h5>
+<p><img width="490" height="466" src="plansprogress_clip_image012.gif"></p>
+<h5>Main Camera</h5>
+<p>This is the main camera that focuses the  screen, the settings were configured to use an orthographic 2D camera set to  five units away to fit the main menu on the screen.</p>
+<h5>Canvas UI</h5>
+<p>This was created by using a unity &lsquo;canvas  UI&rsquo; object, and some smaller panels inside it. One panel is the overall large  panel that displays the background image, the next panel is a smaller one to  hold in the title text as well as the buttons. The reason UI is used is to  ensure that no matter the screen resolution all objects will fit on the screen.  Inside the Canvas UI is Panel #1. This panel keeps all the UI objects stretched  onto the screen as well as holds a background image, sourced from the royalty  free site (http://clipart-library.com). Inside Panel#1, is Panel#2. This panel  holds the Title Text object which displays the title of our application. <br>
+  Inside Panel#2, is Panel#3, which holds all  mini-game buttons. These buttons are used to launch the minigame. They run a  unity UI button touch function to launch a function on the &lsquo;Menu Script&rsquo; C#  script, depending on the button pressed. As of this version (v0.03), only one  mini game is working so only the &lsquo;Mini Game #1&rsquo; button is active. The exit  button is simply there to load the &lsquo;Exit Application&rsquo; function and quit the  application.</p>
+<h5>Event System</h5>
+<p>This is a default unity object that is  created to register clicks on the &lsquo;Canvas UI&rsquo; objects and buttons, it is  created by default and can be ignored for now.</p>
+<h5>Menu Controller/Menu Script</h5>
+<p>This is a unity object that is created to  hold the Menu Script. The menu script controls button presses and sets up the  system based on these presses to register the correct button pressed, saved the  game selected in the global variables controller and then load the flash card  selection scene.<br>
+  <img width="596" height="361" src="plansprogress_clip_image014.gif"></p>
+<h4>The Flashcard Selection Scene</h4>
+<p>The flashcard selection scene is loaded  after a user clicks one of the main menu buttons. This scene has three general  tasks:</p>
+<ul>
+  <li>Dynamically loads flashcards by  pulling both images and audio from the &lsquo;flashcards&rsquo; directory in the  application root.</li>
+  <li>Displays the flashcards on a  table of cards, with two rows, five cards per row.</li>
+  <li>Allows a user to select the ten  flashcards they will use in the mini game they have selected.</li>
+</ul>
+<p>As of version v0.03, this is the current  display that the user will see when they load the flashcard selection area of  the application:<br>
+  <img width="480" height="383" src="plansprogress_clip_image016.gif"></p>
+<h5>Scene Diagram:</h5>
+<p><img width="480" height="480" src="plansprogress_clip_image018.gif"></p>
+<h5>Main Camera</h5>
+<p>This is the main camera that focuses the  screen, the settings were configured to use an orthographic 2D camera set to twenty  units away to fit the main menu on the screen. This is a difference in distance  as opposed to the main menu</p>
+<h5>Canvas UI</h5>
+<p>This was created by using a unity &lsquo;canvas  UI&rsquo; object, in the flashcard selection scene it is simply used to display the  three different text objects, &lsquo;Selected Text&rsquo; which tells the user how many  flashcards they have already selected, &lsquo;Title Text&rsquo; which tells the user to  select ten flashcards and &lsquo;Page Number&rsquo; which shows the current page of the  flashcards you are viewing.</p>
+<h5>Event System</h5>
+<p>This is a default unity object that is  created to register clicks on the &lsquo;Canvas UI&rsquo; objects and buttons, it is  created by default and can be ignored for now.</p>
+<h5>Flashcard Controller / Flashcard Loader Script</h5>
+<p>This is a unity object that is created to hold  the Flashcard Loader Script. The flashcard loader script is responsible for  reading all files in the applications root directory, flashcards folder and  creating the unity game objects for these flashcards.<br>
+  <img width="555" height="447" src="plansprogress_clip_image020.gif"></p>
+<ul>
+  <li>Loads all images in the  /application directory/flashcards/images/ folder.</li>
+  <li>Loads all images in the  /application directory/flashcards/audio/ folder.</li>
+  <li>Matches these files together  and creates flashcard objects that will have both the image and the audio  files.</li>
+  <li>Moves on to the display cards method.</li>
+</ul>
+<p><img width="480" height="252" src="plansprogress_clip_image022.gif"> <br>
+  Here the application displays all the  created cards in two rows, with five cards per row. If there are more than  this, they will not be loaded unless the user changes the page.<br>
+  <img width="480" height="371" src="plansprogress_clip_image024.gif"> <br>
+  Here the application awaits either &lsquo;Left  Arrow&rsquo; or &lsquo;Right Arrow&rsquo; buttons to be pressed, it then changes the page of the  flashcards the user is viewing. If the user is already at page 1, it will not  allow the user to continue going back, as well as if the user is at the end of  the flashcards, the user will not be allowed to continue forward.<br>
+  <img width="480" height="238" src="plansprogress_clip_image026.gif"> <br>
+  This Update Elements GUI function is run  every every time a button is pressed to update the graphics user interface  (GUI) of the user. It changes arrows to red if they are unavailable to be  pressed, as well as the continue button to red if the user has not selected  enough flashcards to proceed. It also increments the selected flashcards text  so the user can see how many flashcards they have already selected.<br>
+  <img width="480" height="120" src="plansprogress_clip_image028.gif"> <br>
+  These functions come in from the flashcard  scripts on the flashcard objects and add/remove them from the selected  flashcards list. The selected flashcards list is used to be passed into the  next scene, the selected game from the main menu, so that the users correct  flashcards are used when they play their selected mini game.<br>
+  <img width="542" height="288" src="plansprogress_clip_image030.gif"> <br>
+  This Continue to Game function is used when  the user clicks the &lsquo;continue&rsquo; button the GUI. It first checks if the user has  selected 10 flashcards, then proceeds to save the name of all the selected  flashcards and saves them in the global variables controller to be carried onto  the next scene. If the user has not selected 10 flashcards, the user will hear  a buzz and not be able to continue.</p>
+<h5>Flashcard Game Objects / Flashcard Script:</h5>
+<p>The flashcard game object has both an image  an audio attached to it. It is created by the flash card loader script. This is  the game object that physically shows up as card in the game itself.<br>
+  Here is an example of two of these objects  appearing in the flashcard selection screen.<br>
+  <img width="480" height="310" src="plansprogress_clip_image032.gif"> <br>
+  Attached to these flashcard objects is  &lsquo;flashcard&rsquo; script. This handles users' interactions with the flashcard's game  objects.<br>
+  <img width="480" height="440" src="plansprogress_clip_image034.gif"> <br>
+  The flashcard script simply listens for a  click on the flashcard game object, then sends passes itself to the flashcard  loader script when pressed. If it has already been pressed, it sends the  request to deselect it.</p>
+<h4>Game #1 Scene</h4>
+<p>This game is created with the following  configuration, first the user hears audio from one of the cards at random, then  they must click on the cards. If they click the incorrect card, it turns red  and one point is deducted. If they hit the correct card, a point is added, and  a new cards audio is played. The user has 60 seconds to get as many points as  possible. When the time runs out, the user can no longer click on anymore  cards.<br>
+  Here is an example of the Game # 1 scene as  of v0.03.<br>
+  <img width="480" height="384" src="plansprogress_clip_image036.gif"> <br>
+  Here is the diagram for game #1.<br>
+  <img width="416" height="480" src="plansprogress_clip_image038.gif"></p>
+<h5>Main Camera</h5>
+<p>This is the main camera that focuses the  screen, the settings were configured to use an orthographic 2D camera set to  twenty units away to fit the game #1 scene</p>
+<h5>Canvas UI</h5>
+<p>Three text components are here, used to  display the score, the time remaining and show the title text.</p>
+<h5>Event System</h5>
+<p>This is a default unity object that is  created to register clicks on the &lsquo;Canvas UI&rsquo; objects and buttons, it is  created by default and can be ignored for now.</p>
+<h5>Game Controller / Game 1 Script</h5>
+<p>This is a unity object that is created to  hold the Menu Script. The menu script controls button presses and sets up the  system based on these presses to register the correct button pressed, saved the  game selected in the global variables controller and then load the flash card  selection scene.<br>
+  <img width="480" height="383" src="plansprogress_clip_image040.gif"> <br>
+  This Create Cards method runs through and  loads cards and image files from the folder based on what was passed through  during the flashcard selection screen.<br>
+  <img width="480" height="232" src="plansprogress_clip_image042.gif"> <br>
+  This Display Cards method sets the cards in  a 2x5 grid on the game playing area, and adds it dynamically to allow a change  in the amount of cards later on if the project design changes.<br>
+  <img width="480" height="95" src="plansprogress_clip_image044.gif"> <br>
+  This method is run every time a flashcard  is correctly selected to choose a new random card for the user to find.<br>
+  <img width="480" height="331" src="plansprogress_clip_image046.gif"> <br>
+  This method is run when the mouse is  clicked on a card to either give a ding and add a point if the card clicked is  correct, or a buzz if the card clicked is incorrect. If the card is incorrect,  the card will change colour to red to allow the user to know that the card  selected was not the correct card.<br>
+  <img width="480" height="71" src="plansprogress_clip_image048.gif"> <br>
+  This updates the user's graphics user  interface to show seconds remaining as well as update the users score.<br>
+  <img width="323" height="205" src="plansprogress_clip_image050.gif"> <br>
+  This is the timer that counts down the  seconds, if time runs out the game will progress to game over.<br>
+  <img width="480" height="222" src="plansprogress_clip_image052.gif"> <br>
+  This method is run to ensure the game stops  and the users score is finalised at the end of the round.</p>
+<h4>Application version log:</h4>
+<h5>V0.01</h5>
+<p>--Creation of Unity Project.<br>
+  --Creation of Main Menu Scene.<br>
+  --Creation of Buttons for Main Menu.<br>
+  --Creation of Main Menu UI.<br>
+  --Creation of Main Menu Controller.<br>
+  --Basic Main Menu Scene completed. Will  need to revise and update in a later version.<br>
+  V0.02 <br>
+  --Creation of flashcard selection scene.<br>
+  --Creation of flashcards selection buttons.<br>
+  --Creation of flashcard loader script.<br>
+  --Creation of the flashcard script.<br>
+  --Flashcard Selection scene complete.<br>
+  V0.03 <br>
+  --Creation of Game #1 Scene.<br>
+  --Creation of GameController.<br>
+  --Creation of Game1Script.<br>
+  --Game #1 Scene complete.</p>
+<h4>Programming still to do:</h4>
+<h5>Flashcard dynamic loading issues</h5>
+<p>The flashcard software must be able to load  flashcards dynamically by the user AFTER the project is built from the source  files, however right now flashcards can only be added before the project is  built. This is a bug and problem in code design which needs to be resolved, we  are looking into how to do this now.</p>
+<h5>Game # 2-?</h5>
+<p>The project still needs the addition of  more mini games, starting firstly with the planned-out memory game that will  need to be created. This can be created following the similar pattern of how  game # 1 was created.</p>
+<h5>Game # 3-?</h5>
+<p>A planned 3rd  mini-game is to be created, in addition to the &lsquo;memory&rsquo; game. This can also be  created following the similar pattern of how game # 1 was created.</p>
+<h5>Cloud integration and downloading and sharing of flashcard  packs</h5>
+<p>Another planned feature is the idea of  sharing flashcard packs. An upload and download function would need to be  created on a cloud repository with unity3D functions set to be able to load  these at will.</p>
+<h2>Assets Acquisition and Creation</h2>
+<p>In designing the flash cards, I interviewed  a New South Wales primary school teacher to determine appropriate content, so  that they would be beneficial for preschool and kindergarten classes learning  English as second language. <br>
+  Subsequently I decided to use common nouns  in 5 different categories. These could be used as sight words for reading, or  for classification activities. In order to determine the correct format, I  researched fonts used in schools and those that have optimum readability. For  this reason, I chose the font Berlin Sans Fb. <br>
+  For the voiceovers I commissioned a  professional voice actor to record the words ensuring the clearest articulation  and audibility. Clear articulation for young listeners is essential, especially  for the high frequency sounds. The flashcard artwork is royalty free and chosen  for its simplistic style and cartoonlike appearance which would appeal to young  children. Each flashcard is 750x 1000 pixels to ensure a correct fit within the  app. The website link is: <a href="https://pixabay.com/">https://pixabay.com</a></p>
+<h2>Testing and QA</h2>
+<h4>V0.01 QA Session #1</h4>
+<p>Tester 1<br>
+  Application opened ok, did notice the menu  didn&rsquo;t resize properly and so was marked as a bug. Seemed a bit slow to exit  once hitting the exit button.</p>
+<h4>V0.02 QA Session #2 </h4>
+<p>Tester 1<br>
+  Flashcard selection worked fine but the  game 2 button was not working, but it is in development. Sometimes flashcards  doubled up. Also, cannot add your own cards in the folder, the flashcard  software doesn&rsquo;t load the new cards?</p>
+<h4>V0.03 QA Session #3 </h4>
+<h5>Tester 1 </h5>
+<p>Everything worked as normal, the flashcard  doubling up still sometimes occurred as well as the game 2 button was still not  accessible, but that feature is not developed yet. No major bugs were found,  and the game seemed to run smoothly enough and loading the flashcards from the  flashcard folder still doesn&rsquo;t work. One issue was a slight delay with the  &lsquo;buzz&rsquo; sound sometimes coming up at weird intervals unrelated to the game  playing itself.</p>
+<h5>Tester 2 </h5>
+<p>As the game  is a basic children's game, the background type for the game's tester could be  anyone who is able to notice any basic errors as the prototype of the game. As  we have IT skills across a broad range in the group any member can test and  also mention enhancements to the game. It is possible that a few versions of  the game could be made after some prototype changes.<br>
+  The games  files themselves are sitting in their own unique game folders with pictures and  sounds, so it makes it simple that a user doesn&rsquo;t click on the wrong file to  open and start the game. Generally, you could create a desktop icon.  The main screen itself has no main bugs at  this stage of the development of the game, the only issue that might be  considered from some criteria is the amount of green space between the tomato pictures  and the games buttons.<br>
+  The second  mini games button doesn&rsquo;t work at this stage but the second game is still under  construction so this will be corrected in the next games update of the  prototype. The first option to load up the game works as intended. After the  game is loaded each sound for each animal work as intended and no further  corrections will be needed for this, the time on the game works as it should as  well. The only main bug I could find through playing at this stage was that the  animal cards you would have to select would often double up, this could be a  creation of the game but it was happening a bit so could be considered a  potential bug.<br>
+  So far, the  majority of the prototype works as it has been designed. <br>
+  Tester 3<br>
+  Main Menu functions correctly, although menu option size could be  increase as on a smaller screen it may be difficult to read. Mini-Game #2 is  not yet functional, so the button for it does nothing as of yet. In Game #1 the  &ldquo;Chair&rdquo; card does not have an associated audio file attached to it so it does  not play, seeing as the game uses audio cues to play this makes the chair card  unusable in it&rsquo;s current state. Page 3 on the card selection screen currently  empty, this should be removed if it is to stay empty, or additional cards should  be added to fill this screen. The game also repeats the flashcards rather than  ending once all have been correctly selected. </p>
+<h2>Project story so far</h2>
+<p>The project has been coming along smoothly,  some changes in design have been noted such as the idea to implement cloud  flashcard decks into the program. We have not designed any flashcard categories  or sorting systems yet but have also decided to add this into the program. Some  problems we have encountered is the large file size and difficulty sharing work  amongst the group, we have opted for Unity3D collaboration to try and help  collaborate changes better.<br>
+  We are now at the point where the basic  weekly timeline has been met and are looking forward to continuing this project  even after the module is over.</p>
+<h2>Problems</h2>
+<p>We still have a problem with dynamically  loading flashcards, right now they are loaded from the &lsquo;resources&rsquo; folder in  unity3d however new flashcards cannot be added after the project is built. We  have tried a few different methods but are still working on a way to resolve  this issue as the program does need to be able to dynamically load flashcards.</p>
+<h2>Handover</h2>
+<p>If another team was to take over at this  point, they would have a couple of main points to follow up:</p>
+<ul>
+  <li>Fixing the issue of dynamically  adding flashcards AFTER the project is built. Right now flashcards can only be  dynamically added by adding them to the source code before building.</li>
+  <li>Cloud integration (Planning and  execution for downloading and uploading flashcard decks).</li>
+  <li>Expansion of flashcards assets.</li>
+  <li>Adding background music and  images.</li>
+  <li>Creation of a second or more  mini games.</li>
+</ul>
+<h1>Roles</h1>
+<p>For our group we have decided not to go  with individual roles, but with section the work into categories of work that  need to be done. We have identified six categories that will need to be  completed. The reason we have chosen this approach as opposed to singular roles  is so that people may take up multiple tasks and roles if they wish to do so.  Here are the categories we have chosen to go with, all work in our timeframe as  well as project progress will also be separated into these roles if they are  applicable.</p>
+<h2>Admin</h2>
+<p>This will consist of all organisation on  our platforms, including Trello/slack/discord/GitHub, meetings, the document  report as well as all other admin related tasks. Another task falling under  this category is the compiling and quality control of our reports and  documents. This will also include the work on the rest of the document less  related to our project, for example the team profile section on our main  document.</p>
+<h2>Programming</h2>
+<p>This will consist of all work related to  programming and development and will mainly focus on the use of Unity3D to  create the actual application as well as creating logs. Programming will also  be responsible for documenting, screenshotting and explaining our development  process so it is easy for another team to pick up our project.</p>
+<h2>Assets acquisition/creation</h2>
+<p>This will be all asset acquisition and  creation. This involves creating the flashcards, recording audio, finding  background images and any other graphics/audio we might need for our project.  This will also encompass the creating of a progress report for this process and  have we have managed so far.</p>
+<h2>Testing/QA</h2>
+<p>Testing will be all testing and QA on our  application project, as well as the creation of reports showing testing and QA  information.</p>
+<h2>Website Creation/Updating</h2>
+<p>This will be work related to the updating  of our GitHub page to reflect all the new content generated by Assignment 3.</p>
+<h2>Presentation Video</h2>
+<p>All work related to the creation and  storyboarding of our presentation video for our application.</p>
+<h1>Scope and Limits</h1>
+<p>The general scope of this project does seem  to be possible to do in the allotted time, as the project itself is reasonable  for six people to create. We have, however, placed some limits on creating this  application to deal with scope creep and help us meet and manage our time and  work commitments on this project.<br>
+  One of these limits has been the number of  mini games we will produce, as it stands now, we only plan to add two. Ideally,  if time and scope constraints weren&rsquo;t an issue, we would want to add many more  mini games to the application.<br>
+  Another limit on our project is the number  of flashcards we will create and supply with the application. A set of twenty  is a rather modest number. Ideally, we would have many more. An ESL flashcard  application such as this should have at least 200 or so cards in a stock  version. We plan an enhancement where the users may create their own  flashcards, but we would prefer more flashcards bundled with the stock application.</p>
+<br clear="all">
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+  </script>
+</body>
+</html>

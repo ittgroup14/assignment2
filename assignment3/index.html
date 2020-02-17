@@ -1,11 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
+<link href="style.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
-Placeholder to test if the link works page~
+
+<div class="header">
+	<div class="team14">
+	</div>
+</div>
+
+<div id="navbar">
+	<a class="active" href="index.html">Assignment 3: ESL</a>
+	  
+  <a href="javascript:void(0)">>></a>
+  <a href="teamprofile.html">Team Profile</a>
+	<a href="overview.html">Project Overview</a>
+	  <a href="aimsgoals.html">Aims and Goals</a>
+	  <a href="plansprogress.html">Plans and Progress</a>
+	  <a href="toolstech.html">Tools and Technologies</a>
+			  <a href="testing.html">Testing</a>
+  <a href="risks.html">Risks</a>
+  <a href="processes.html">Processes</a>
+	  <a href="jobs.html">Jobs</a>
+	  <a href="feedback.html">Group Feedback</a>
+</div>
+<h1>Index</h1>
+<h3>ESL</h3>
+<p>ESL stands for English as a Second Language. It is designed to teach young children english nouns and was made by RMIT Team #14, the Red Panthers.<br clear="all">
+</p>
+<p>&nbsp;</p>
+<h2>Download ESL</h2>
+<p><a href="https://github.com/ittgroup14/assignment2/blob/master/assignment3/FlashcardSystemv0.03.zip">Click to download for Windows</a></p>
+<p>&nbsp;</p>
+<br clear="all">
+<h2>&nbsp; </h2>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+  </script>
 </body>
 </html>
